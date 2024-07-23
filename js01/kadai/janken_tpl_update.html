@@ -33,13 +33,15 @@
 </main>
 <footer>
   <h1 id="resultemessage">結果は・・・</h1>
+  <h1 id="count"></h1>
 </footer>
 <script>
 //じゃんけん用のSCRIPTを書いてください
+let count = 0;
 $(".button").on("click",function(){
     const r = Math.random()*3; //小数点0.000001~0.99999
     const n = Math.ceil(r);    //繰り上げ0.01➡1
-    console.log(n);
+    console.log(count);
     if(n == 1){
         $("#pc_hands").html("ぐー");      //文字を上書き
         document.getElementById('computerhand-pic').setAttribute('src','./img/image 3.png');
@@ -87,22 +89,22 @@ $(".button").on("click",function(){
     }
 });
 function win(){
-  $("#judgment").html("あなたの勝ち");
-  // $("#resultemessage").html("あなたの勝ち");
-  $("#resultemessage").html("あなたの勝ち");
-  // <img src="./img/image 11.png" alt="" style="width: 10vw;"> 
-  // <img src="./img/image 12.png" alt="" style="width: 10vw;">
-  
-  
+  count ++;
+  if(count > 1){
+    $("#resultemessage").html("あなたの勝ち！" + String(count) + "連勝中！");
+  }
+  else{
+    $("#resultemessage").html("あなたの勝ち！");
+  }
+  console.log(count);
 };
 function draw(){
-  $("#judgment").html("あいこ！");
   $("#resultemessage").html("あいこ！");
 };
 
 function lose(){
-  $("#judgment").html("あなたの負け");
   $("#resultemessage").html("あなたの負け");
+  count = 0;
 };
     
     
