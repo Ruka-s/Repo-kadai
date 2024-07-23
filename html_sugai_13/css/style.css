@@ -1,0 +1,313 @@
+/* ここから下に記載していく */
+p{
+    font-size: 16px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+
+}
+header img{
+    margin: 10px 0;
+}
+nav{
+    font-size: 12px;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    margin: 50px 50px 50px 0;
+}
+nav li a{
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+#top{
+    position: relative;
+}
+#top img{
+    width: 100%;
+}
+.mainmessage{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    color: white;
+    font-size: 30px;
+}
+#top h1{
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#top p{
+    text-align: center;
+}
+
+section{
+    text-align: center;
+    padding-top: 60px;
+}
+.engtitle{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.jpntitle{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.yellow{
+    color: #ffd61a;
+}
+.messages{
+    padding: 40px 0;
+}
+.messages p{
+    padding-bottom: 40px;
+}
+.slider img{
+    width: 24vw;
+}
+#course .messages{
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+
+/*course */
+.explanation-box{
+    display: flex;
+    justify-content: center;
+}
+.explanation-box img{
+    width: 45vw;
+}
+.text-box{
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fafafa;
+}
+.right-box{
+    align-items: flex-start;
+    /* padding-left: 50px; */
+}
+.left-box{
+    align-items: flex-end;
+    /* padding-right: 50px; */
+}
+.text-box h2{
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.right-text{
+    padding-left: 50px;
+    text-align: left;
+}
+.left-text{
+    padding-right: 50px;
+    text-align: left;
+}
+.texts{
+    width: 480px;
+}
+/* news */
+.newsboxes{
+    display: flex;
+    justify-content: center;
+}
+.news-box{
+    width: 300px;
+    margin-top: 60px;
+    margin-right: 30px;
+}
+.news-box-end{
+    margin-right: 0px;
+}
+.date{
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 24px;
+    font-size: 12px;
+}
+.news-text{
+    font-size: 12px;
+    text-align: left;
+}
+.yellowbtn a{
+    display: block;
+    background-color: #ffd61a;
+    border: #ffd61a solid;
+    margin: 60px auto;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color:#fafafa;
+}
+.yellowbtn a::after{
+    color: #fafafa;
+}
+.yellowbtn a:hover{
+    border: #ffd61a solid;
+    background-color: #fafafa;
+    color: #ffd61a;
+}
+
+#access{
+    background-color: #fafafa;
+    width: 100vw;
+    padding: 60px 0;
+}
+iframe{
+    margin: 40px 0 60px 0;
+}
+.info-table{
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+.info-table tr{
+    height: 50px;
+}
+
+.info-table th{
+    text-align: left;
+}
+.info-table td{
+    text-align: left;
+}
+
+/* 問い合わせフォーム */
+/* .contact-ttl {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+} */
+.messages2{
+    padding-top: 40px;
+}
+.messages2 p{
+    padding-bottom: 30px;
+}
+
+.contact-table {
+    width: 640px;
+    margin: 40px auto 30px  ;
+    /* border: 1px solid #ccc; */
+    text-align: center;
+}
+
+.contact-item,.contact-item-detail,
+.contact-body {
+    padding: 8px;
+    border-top: 1px solid #ccc;
+}
+.contact-last{
+    border-bottom: 1px solid #ccc;
+}
+
+.contact-item {
+    text-align: left;
+    width:240px;
+    border-right:1px solid #bfbfbf;
+    padding:auto 64px auto 16px;
+}
+
+.contact-body {
+    width: 400px;
+    text-align: left;
+}
+
+.form-text {
+    width: 328px;
+    height: 36px;
+    border: 1px solid #bfbfbf;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 400px;
+}
+
+.form-select {
+    width: 180px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-skill {
+    display: block;
+    margin-bottom: 24px;
+}
+
+/* .contact-skill + .contact-skill {
+    margin-top: 10px;
+} */
+
+.contact-skill-txt {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.contact-item-detail{
+    text-align: left;
+    width:240px;
+    border-right:1px solid #bfbfbf;
+    padding-left:16px;
+}
+textarea{
+    vertical-align:top;
+}
+
+.contact-submit {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 100vh;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+label{
+    text-align: left;
+    font-size: 12px;
+}
+
+footer{
+    margin-top: 140px;
+    background-color: #707070;
+    color: #fafafa;
+    text-align: center;
+    font-size: 16px;
+    padding: 30px 0;
+    width: 100vw;
+}

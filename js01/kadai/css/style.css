@@ -1,0 +1,70 @@
+body{
+    background-color: #F9F9E0;
+    font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+header,footer{
+    background-color: #F9F9E0;
+    border: none;
+    color: #3AA6B9;
+}
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+footer{
+    border:none;
+}
+.myarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45vw;
+    height: 400px;
+    /* 薄ピンク */
+    background-color: #FFD0D0; 
+    border-radius: 15px;
+    padding: 1vw;
+}
+.computerarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45vw;
+    height: 400px;
+    /* 濃いピンク */
+    background-color: #FF9EAA;
+    border-radius: 15px;
+    padding: 1vw;
+}
+.message{
+    font-size: 30px;
+    height: 24px;
+    border: none;
+    color: #3AA6B9;
+    font-weight: 400;
+}
+.myhand{
+    width: 13vw;
+}
+.hands{
+    display: flex;
+}
+.button{
+    padding: 1vw;
+    border-radius: 15px;
+}
+.button:hover{
+    background-color: #F9F9E0;
+    
+
+}
+.computerhand{
+    text-align: center;
+}
+#computerhand-pic{
+    width: 15vw;
+    /* background-color: #F9F9E0;
+    border-radius: 15px; */
+}

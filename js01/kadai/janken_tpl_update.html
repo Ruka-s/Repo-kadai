@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<link rel="stylesheet" href="css/style.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん</h1>
+</header>
+
+<main>
+  <div class="myarea">
+   <p class="message">あなたの手を選んでね</p> 
+   <div class="hands">
+    <div id="gu_btn"class="button"><img src="./img/image 9.png" alt="" class="myhand"></div>
+    <div id="cho_btn"class="button"><img src="./img/image 10.png" alt="" class="myhand"></div>
+    <div id="par_btn"class="button"><img src="./img/image 8.png" alt="" class="myhand"></div>
+  </div>
+  </div>
+  <div class="computerarea">
+    <p class="message">コンピュータと勝負！</p> 
+    <div class="computerhand">
+      <img src="./img/image 4.png" id="computerhand-pic" alt="">
+    </div>
+
+  </div>
+</main>
+<footer>
+  <h1 id="resultemessage">結果は・・・</h1>
+</footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+$(".button").on("click",function(){
+    const r = Math.random()*3; //小数点0.000001~0.99999
+    const n = Math.ceil(r);    //繰り上げ0.01➡1
+    console.log(n);
+    if(n == 1){
+        $("#pc_hands").html("ぐー");      //文字を上書き
+        document.getElementById('computerhand-pic').setAttribute('src','./img/image 3.png');
+        if(this.id=="gu_btn"){
+          draw();
+        }
+        else if(this.id=="cho_btn"){
+          lose();
+        }
+        else{
+          win();
+
+        }
+    }
+    if(n == 2){
+        $("#pc_hands").html("ちょき");
+        // elem.src = "./img/image 2.png";
+        document.getElementById('computerhand-pic').setAttribute('src','./img/image 2.png');
+        if(this.id=="gu_btn"){
+          $("#myhand").html("ぐー");
+          win();
+        }
+        else if(this.id=="cho_btn"){
+          $("#myhand").html("チョキ");
+          draw();
+        }
+        else{
+          $("#myhand").html("パー");
+          lose();
+        }
+    }
+    if(n == 3){
+        $("#pc_hands").html("パー");
+        document.getElementById('computerhand-pic').setAttribute('src','./img/image 1.png');
+        if(this.id=="gu_btn"){
+          $("#myhand").html("ぐー");
+          lose();
+        }
+        else if(this.id=="cho_btn"){
+          win();
+        }
+        else{
+          draw();
+        }
+    }
+});
+function win(){
+  $("#judgment").html("あなたの勝ち");
+  // $("#resultemessage").html("あなたの勝ち");
+  $("#resultemessage").html("あなたの勝ち");
+  // <img src="./img/image 11.png" alt="" style="width: 10vw;"> 
+  // <img src="./img/image 12.png" alt="" style="width: 10vw;">
+  
+  
+};
+function draw(){
+  $("#judgment").html("あいこ！");
+  $("#resultemessage").html("あいこ！");
+};
+
+function lose(){
+  $("#judgment").html("あなたの負け");
+  $("#resultemessage").html("あなたの負け");
+};
+    
+    
+    
+    
+    
+    
+
+</script>
+</body>
+</html>
