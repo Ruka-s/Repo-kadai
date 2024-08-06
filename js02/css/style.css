@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+    background-color: #355070; /* Dark blue background */
+    color: white;
+    margin: 0;
+  }
+  
+  header {
+    background-color: #6d597a; /* Purple header */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .buttons {
+    display: inline-block;
+  }
+  
+  button {
+    background-color: #b56576; /* Pink button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #eaac8b; /* Orange heading */
+  }
+  
+  .password-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .password-item {
+    background-color: #f8edeb; /* Light background for items */
+    color: #333; /* Dark text for items */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .password-item img {
+    max-width: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
