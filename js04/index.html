@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+    <div class="ml-10 mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="sm:col-span-4 my-4">
+          <label for="username" class="block text-sm font-medium leading-6 text-gray-900">検索したいアーティストは？</label>
+          <div class="mt-2 flex">
+            <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+              <input type="text" name="username" id="artistname" class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="ex.Vaundy">
+              
+            </div>
+            <button type="button" value="検索" onclick="clickBtn()" class="rounded-md bg-white mx-3 my-2 px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">検索</button>
+          </div>
+          
+        </div>
+    </div> 
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="mx-10 w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <tbody>
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        項目
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        検索結果
+                    </th>
+                </tr>
+            </thead>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    アーティスト名
+                </th>
+                <td id="PreArtistName"　class="px-6 py-4"></td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    フォロワー数
+                </th>
+                <td id="followers"　class="px-6 py-4"></td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    ジャンル
+                </th>
+                <td id="genres"　class="px-6 py-4"></td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Spotify URL
+                </th>
+                <td id="external_url"　class="px-6 py-4"></td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    アーティスト画像
+                </th>
+                <td id="image"　class="px-6 py-4"></td>
+            </tr>
+            <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    (Spotify内)人気度
+                </th>
+                <td id="popularity"　class="px-6 py-4"></td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+    
+</body>
+
+</html>
