@@ -33,7 +33,7 @@ fclose($file);
         <!-- <p class="text-gray-600">No Credit Card required</p> -->
       </div>
 
-      <a href="read.php" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Summary</a>
+      <a href="./read.php" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Summary</a>
     </div>
   </div>
 </div>
@@ -45,7 +45,7 @@ fclose($file);
         <!-- <p class="text-gray-600">No Credit Card required</p> -->
       </div>
 
-      <a href="post.php" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Back</a>
+      <a href="./post.php" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Back</a>
     </div>
   </div>
 </div>

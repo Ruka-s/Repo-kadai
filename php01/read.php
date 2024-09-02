@@ -14,7 +14,7 @@
     <th>年齢</th>
   </tr>
 <?php
-$file = fopen('data/data.txt', 'r');// ファイルを開く
+$file = fopen('./data/data.txt', 'r');// ファイルを開く
 // ファイル内容を1行ずつ読み込んで出力
 while ($str = fgets($file)) {
     $str2 = explode(",", $str);

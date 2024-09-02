@@ -5,7 +5,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<form action="write.php" method="post" class="my-5 mx-10">
+<form action="./write.php" method="post" class="my-5 mx-10">
 	<h4 class="font-bold text-3xl">アンケートフォーム</h4>
 <div class="my-5">
     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">お名前</label>
