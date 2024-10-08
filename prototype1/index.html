@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorageの例</title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/sample.css">
+</head>
+<body>
+    <section class="generatearea">
+        <h1 id="password">Diary</h1>
+        <h2>今日の写真とコメントを残そう</h2>
+        <form id="dataForm">
+            <!-- <label for="image">画像URL:</label>
+            <input type="text" id="image" required> -->
+            <!-- <label for="image"></label> -->
+            <label for="comment"></label>
+            <textarea id="comment" placeholder="comment"required></textarea>
+            <input type="file" id="image" accept="image/*" required>
+            <button type="submit" id="save" class="button-1">保存</button>
+        </form>
+        <div class="buttons">
+            <button id="loadBtn" class="button-1">表示</button>
+            <button id="clearBtn" class="button-1">削除</button>
+        </div>
+        
+    </section>
+    <h2>Daily List</h2>
+    <table id="list">
+        <!-- ここに追加データが挿入される -->
+     </table>
+
+    <script>
+        // データを保存するフォームのイベントリスナー
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // フォームのデフォルト動作を防止
+
+            // const image = document.getElementById('image').value;
+            const imageFile = document.getElementById('image').files[0];
+            const comment = document.getElementById('comment').value;
+            const savedAt = new Date().toLocaleDateString(); // 保存日時を取得
+
+            const reader = new FileReader();
+            reader.onloadend = function() {
+                // 画像をBase64形式で取得
+                const base64Image = reader.result;
+
+                // データオブジェクトの作成
+                const data = {
+                    image: base64Image,
+                    comment: comment
+                };
+
+            // オブジェクトをJSON形式に変換してlocalStorageに保存
+            localStorage.setItem(savedAt,JSON.stringify(data));
+            alert('データが保存されました。');
+            };
+            display();
+            reader.readAsDataURL(imageFile); // 画像ファイルを読み込む
+            
+        });
+
+        // // データを表示するボタンのイベントリスナー
+        document.getElementById('loadBtn').addEventListener('click', function() {
+            display();
+        }); 
+        
+        function display(){
+            $("#list").find("tr:gt(0)").remove(); // 以前のデータをクリア
+            for(let i=0;i< localStorage.length ; i++){
+            const savedAt = localStorage.key(i);
+
+            const data = JSON.parse(localStorage.getItem(savedAt));
+            // alert(i+`保存日時: ${savedAt}\n画像URL: ${data.image}\nコメント: ${data.comment}`);
+            const html ='<tr><th>' + savedAt + '</th><td><img src="' + data.image+ '" style="max-width:20vw;" ></td><td>' +data.comment + '</td></tr>';
+            $("#list").append(html);
+            }
+        }
+
+        // データを削除するボタンのイベントリスナー
+        document.getElementById('clearBtn').addEventListener('click', function() {
+            localStorage.clear();
+            $("list").empty();
+        });
+    </script>
+</body>
+</html>

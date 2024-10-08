@@ -1,0 +1,162 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+    width:100%;
+}
+
+h1{
+    font-size:7vh;
+    color: #FFF8F3;
+    text-align: center;
+    margin:0 auto;
+}
+main{
+    width:100%;
+    /* height: 100vh; */
+    display: block;
+    position:relative;
+    background-color: #FBF9F1;
+}
+.generatearea {
+    background-color: #405D72;
+    padding: 6vh 0;
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:96%;
+    font-size: 80%;
+    margin: 0 3%;
+    text-align: center;
+}
+li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #fff;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+    color:#0d7dfd;
+}
+li:hover{
+    background: #0d7dfd;
+    color:#fff;
+}
+textarea{
+  margin: 10px 3%;
+  width: 50%;
+  height: 50px;
+  font-size:80%;
+  box-shadow: 3px 3px 3px 3px #555;
+  background-color:rgb(241, 239, 239);
+}
+input{
+  height: 50px;
+}
+#dataForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+.generatearea{
+    background-color: #405D72;
+    text-align: center;
+}
+.cp_iptxt {
+    position: relative;
+    width: 40vw;
+    margin: 20px auto;
+    text-align: center;
+  }
+.cp_iptxt input[type='text'] {
+    font: 20px/1.6 sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    color: #aaaaaa;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+.ef input[type='text']:focus {
+    border: 1px solid #cee3d8;
+    box-shadow: 0 0 5px 1px hsl(83, 73%, 75%);
+    outline: none;
+  }
+  .button-1 {
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    font-size: 0.8em;
+    color: #1c4f74;
+    text-decoration: none;
+    user-select: none;
+    border: 1px #FFF8F3 solid;
+    border-radius: 3px;
+    transition: 0.4s ease;
+  }
+  
+  .button-1:hover {
+    color: #405D72;
+    background: #c4b6ac;
+  }
+  .inputarea{
+    display: flex;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 30vw;
+  }
+  #save{
+    color: #405D72;
+    border-color: #405D72;
+   background-color: #AAD7D9;
+   width: 8vw;
+  }
+  #clear{
+    width: 8vw;
+  }
+
+  table{
+    border-collapse:separate;
+    border-spacing: 5px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  table th,table td{
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  table th{
+    background-color: #7FA1C3;
+    color: white;
+    /* border:solid 1px #7FA1C3; */
+  }
+  
+  table td{
+    color: #405D72;
+    background-color: #AAD7D9;
+    /* border:solid 1px #AAD7D9; */
+  }
+  h2{
+    color: #FFF8F3;
+    font-size: 2vh;
+  }
